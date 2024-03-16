@@ -92,3 +92,190 @@ header h2 {
     box-shadow: 0 0 10px #666;
     scale: 1.05;
 }
+
+
+/*BOTON FLOTANTE COMPRAR*/
+
+.btn-comprar {
+    height: 65px;
+    width: 65px;
+    border-radius: 60px;
+    background: url(./assets/img/shop.svg);
+    background-color: rgb(250, 250, 250);
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.784);
+    background-size: 65%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+
+/* MODAL CHANGUITO -HEADER */
+
+.modal-container {
+    border: 1px solid #666;
+    background-color: #fcfcfc;
+    width: 35%;
+    margin-top: 30px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 9999;
+    /* Asegura que esté por encima de otros elementos */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s;
+    max-height: 80%;
+    /* Altura máxima de la ventana modal */
+    overflow-y: auto;
+    display: none;
+}
+
+.modal-container::-webkit-scrollbar {
+    display: none;
+}
+
+.modal-header {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+    justify-content: space-between;
+}
+
+.modal-header-x {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+    justify-content: space-between;
+}
+
+.changuito-item {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    position: relative;
+    border-bottom: 1px solid #666;
+    padding: 20px;
+}
+
+.changuito-item img {
+    margin-right: 20px;
+}
+
+.changuito-item-titulo {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.selector-cantidad {
+    display: inline-block;
+    margin-right: 25px;
+}
+
+.changuito-item-cantidad {
+    border: none;
+    font-size: 18px;
+    background-color: transparent;
+    display: inline-block;
+    width: 30px;
+    padding: 5px;
+    text-align: center;
+}
+
+.selector-cantidad i {
+    font-size: 18px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+.changuito-item-precio {
+    font-weight: bold;
+    display: inline-block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.btn-eliminar {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: #000;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #000;
+    cursor: pointer;
+    display: block;
+    background: transparent;
+    z-index: 20;
+}
+
+.btn-eliminar i {
+    pointer-events: none;
+}
+
+.changuito-total {
+    background-color: #dbdada;
+    padding: 30px;
+}
+
+.fila {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.btn-pagar {
+    display: block;
+    width: 100%;
+    border: none;
+    background: #000;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-pagar:hover {
+    scale: 1.05;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo semitransparente */
+    z-index: 998;
+    /* Asegura que esté por debajo de la ventana modal pero por encima del resto del contenido */
+}
+
+body.modal-open {
+    overflow: hidden;
+}
